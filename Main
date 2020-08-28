@@ -1,1 +1,53 @@
+class Main {
+  private static int[] sortList = { 8, 5, 6, 2, 4 };
 
+  // 삽입정렬
+  public static void insertionSort(int[] sortList) {
+    int key, j;
+    for (int i = 1; i < sortList.length; i++) {
+      key = sortList[i];
+      for (j = i - 1; j >= 0 && sortList[j] > key; j--) {
+        sortList[j + 1] = sortList[j];
+      }
+      sortList[j + 1] = key;
+    } // end i
+  }
+
+  // 선택정렬
+  public static void selectionSort(int[] sortList) {
+    for (int i = 0; i < sortList.length; i++) {
+      int minIdx = i;
+      for (int j = i + 1; j < sortList.length; j++) {
+        if (sortList[j] < sortList[minIdx]) {
+          minIdx = j;
+        }
+      }
+
+      int temp = sortList[i];
+      sortList[i] = sortList[minIdx];
+      sortList[minIdx] = temp;
+    } // end i
+  }
+
+  // 버블정렬
+  public static void bubbleSort(int[] sortList) {
+    int temp;
+    for (int i = 0; i < sortList.length; i++) {
+      if (sortList[i] > sortList[i + 1]) {
+        temp = sortList[i];
+        sortList[i] = sortList[i + 1];
+        sortList[i + 1] = temp;
+      }
+    } // end i
+  }
+
+  public static void main(String[] args) {
+    // Main.insertionSort(sortList);
+    // Main.selectionSort(sortList);
+    Main.bubbleSort(sortList);
+
+    for (int arrValue : sortList) {
+      System.out.println("sort list value : " + arrValue);
+    }
+  }
+}
