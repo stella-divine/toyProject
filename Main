@@ -1,5 +1,5 @@
 class Main {
-  private static int[] sortList = { 8, 5, 6, 2, 4 };
+  private static int[] sortList = { 10,4,5,8,7,6,3,1,2,9 };
 
   // 삽입정렬
   public static void insertionSort(int[] sortList) {
@@ -33,12 +33,19 @@ class Main {
   public static void bubbleSort(int[] sortList) {
     int temp;
     for (int i = 0; i < sortList.length; i++) {
-      if (sortList[i] > sortList[i + 1]) {
-        temp = sortList[i];
-        sortList[i] = sortList[i + 1];
-        sortList[i + 1] = temp;
+      for(int j=0; j<(sortList.length-1)-i; j++) {
+        if(sortList[j] > sortList[j+1]){
+          temp = sortList[j];
+          sortList[j] = sortList[j+1];
+          sortList[j+1] = temp;
+        }
       }
     } // end i
+  }
+
+  // 퀵정렬
+  public static void quickSort(int[] sortList){
+    
   }
 
   public static void main(String[] args) {
