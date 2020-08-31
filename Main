@@ -51,7 +51,7 @@ class Main {
   public static void main(String[] args) {
     // Main.insertionSort(sortList);
     // Main.selectionSort(sortList);
-    Main.bubbleSort(sortList);
+    // Main.bubbleSort(sortList);
 
     for (int arrValue : sortList) {
       System.out.println("sort list value : " + arrValue);
