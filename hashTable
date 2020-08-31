@@ -83,7 +83,6 @@ public class Main {
     System.out.println("1 : " + h.get("sung"));
     System.out.println("2 : " + h.get("jin"));
     System.out.println("3 : " + h.get("hee"));
-    System.out.println("4 : " + h.get("min"));
-    // System.out.println("kim");
+    System.out.println("4 : " + h.get("min"));  
   }
 }
